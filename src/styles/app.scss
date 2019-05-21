@@ -138,6 +138,12 @@
             }
             .erp-container-content-graphics-business.slide3, .erp-container-content-graphics-business.slide4 {
                 transform: translateX(-150px);
+                .erp-container-content-graphics-star-path-2 {
+                    width: 100%;
+                    transition-delay: 0.6s;
+                    transition-duration: 2s;
+                    opacity: 1;
+                }
             }
             .erp-container-content-graphics-star.slide3, .erp-container-content-graphics-star.slide4 {                
                 width: 400px;   
@@ -145,12 +151,16 @@
                 .erp-container-content-graphics-star-doc, 
                 .erp-container-content-graphics-star-xls, 
                 .erp-container-content-graphics-star-xml, 
-                .erp-container-content-graphics-star-ga, 
+                .erp-container-content-graphics-star-ga {
+                    opacity: 1;
+                    transition-delay: 1s;
+                    transition-duration: 1.5s;
+                }
                 .erp-container-content-graphics-star-top-left, 
                 .erp-container-content-graphics-star-top-right, 
                 .erp-container-content-graphics-star-bottom-left, 
                 .erp-container-content-graphics-star-bottom-right {
-                    opacity: 1;
+                    height: 111px;
                     transition-delay: 1s;
                     transition-duration: 1.5s;
                 }               
@@ -165,13 +175,15 @@
                 .erp-container-content-graphics-star-doc, 
                 .erp-container-content-graphics-star-xls, 
                 .erp-container-content-graphics-star-xml, 
-                .erp-container-content-graphics-star-ga, 
+                .erp-container-content-graphics-star-ga {
+                    opacity: 0;
+                } 
                 .erp-container-content-graphics-star-top-left, 
                 .erp-container-content-graphics-star-top-right, 
                 .erp-container-content-graphics-star-bottom-left, 
                 .erp-container-content-graphics-star-bottom-right {
-                    opacity: 0;
-                }               
+                    height: 0px;
+                }              
             }
             .erp-container-content-graphics-ddm.slide1, .erp-container-content-graphics-ddm.slide2, .erp-container-content-graphics-ddm.slide3 {
                 opacity: 0;                              
@@ -200,10 +212,22 @@
             .erp-container-content-graphics-business {
                 flex: 0 1 200px;
                 width: 200px;
-                z-index: 2;
+                z-index: 1;
                 transform: translateX(-50px);
                 transition-duration: 2s;
             }
+            .erp-container-content-graphics-star-path-2 {               
+                position: absolute;
+                left: -100px;
+                top: 70px;
+                z-index: -1;
+                width: 0;
+                overflow: hidden;
+                transition: 1.5s;   
+                transition-delay: 0s;
+                opacity: 0;   
+                transform: translateX(-15px);                                
+            } 
             .erp-container-content-graphics-ddm {
                 width: 120px;               
                 position: absolute;
@@ -226,35 +250,33 @@
                 position: relative;                
                 width: 400px;
                 height: 350px;
-                transform: translateX(-150px);
+                transform: translateX(-153px);
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-end;
                 align-items: center;
                 z-index: 2;
-                transition-duration: 2s; 
-                
+                transition-duration: 2s;                 
                 overflow: hidden;
                 opacity: 0;
                 .erp-container-content-graphics-star-doc, 
                 .erp-container-content-graphics-star-xls, 
                 .erp-container-content-graphics-star-xml, 
-                .erp-container-content-graphics-star-ga, 
+                .erp-container-content-graphics-star-ga {
+                    opacity: 0;
+                    transition-delay: 0s;
+                    transition-duration: 0s;
+                }   
                 .erp-container-content-graphics-star-top-left, 
                 .erp-container-content-graphics-star-top-right, 
                 .erp-container-content-graphics-star-bottom-left, 
                 .erp-container-content-graphics-star-bottom-right {
-                    opacity: 0;
                     transition-delay: 0s;
-                    transition-duration: 0s;
-                }                
-                .erp-container-content-graphics-star-path-2 {       
-                    order: 2;  
-                    transform: translateX(40px);                                      
-                } 
+                    transition-duration: 0.5s;
+                }           
                 .erp-container-content-graphics-star-main {                    
                     z-index: 2;
                     order: 1;
-                    transform: translateX(80px);
+                    transform: translateX(-69px);
                 }                
                 .erp-container-content-graphics-star-doc {
                     position: absolute;
@@ -284,21 +306,29 @@
                     position: absolute;
                     top: 40px;
                     left: 0;
+                    height: 0px;
+                    overflow: hidden;
                 }
                 .erp-container-content-graphics-star-top-right {
                     position: absolute;
                     top: 40px;
                     right: 0;
+                    height: 0px;
+                    overflow: hidden;
                 }
                 .erp-container-content-graphics-star-bottom-left {
                     position: absolute;
-                    bottom: 40px;
+                    top: 200px;
                     left: 0;
+                    height: 0px;
+                    overflow: hidden;
                 }
                 .erp-container-content-graphics-star-bottom-right {
                     position: absolute;
-                    bottom: 40px;
+                    top: 200px;
                     right: 0;
+                    height: 0px;
+                    overflow: hidden;
                 }
             }
         }
