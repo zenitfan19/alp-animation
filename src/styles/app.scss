@@ -129,18 +129,19 @@
                 width: 0px;
                 overflow: hidden;
             }
-            .erp-container-content-graphics-erp.slide2 {
-                .erp-container-content-graphics-erp-main, .erp-container-content-graphics-star-path-1 {
-                                       
-                }                
+            .erp-container-content-graphics-erp.slide2 {                                
                 width: 290px;         
                 opacity: 1;       
             }
             .erp-container-content-graphics-business.slide2 {
                 transform: translateX(-120px);
             }
+            .erp-container-content-graphics-business.slide3, .erp-container-content-graphics-business.slide4 {
+                transform: translateX(-150px);
+            }
             .erp-container-content-graphics-star.slide3, .erp-container-content-graphics-star.slide4 {                
-                opacity: 1;                 
+                width: 400px;   
+                opacity: 1;             
                 .erp-container-content-graphics-star-doc, 
                 .erp-container-content-graphics-star-xls, 
                 .erp-container-content-graphics-star-xml, 
@@ -148,8 +149,7 @@
                 .erp-container-content-graphics-star-top-left, 
                 .erp-container-content-graphics-star-top-right, 
                 .erp-container-content-graphics-star-bottom-left, 
-                .erp-container-content-graphics-star-bottom-right,
-                .erp-container-content-graphics-star-path-2 {
+                .erp-container-content-graphics-star-bottom-right {
                     opacity: 1;
                     transition-delay: 1s;
                     transition-duration: 1.5s;
@@ -159,13 +159,9 @@
                 opacity: 1; 
                 width: 120px;               
             }
-            .erp-container-content-graphics-star.slide1, .erp-container-content-graphics-star.slide2 {
-                opacity: 0;
+            .erp-container-content-graphics-star.slide1, .erp-container-content-graphics-star.slide2 {                
                 width: 0px;
-                overflow: hidden;
-                .erp-container-content-graphics-star-main {
-                    opacity: 0;
-                } 
+                overflow: hidden;                 
                 .erp-container-content-graphics-star-doc, 
                 .erp-container-content-graphics-star-xls, 
                 .erp-container-content-graphics-star-xml, 
@@ -173,8 +169,7 @@
                 .erp-container-content-graphics-star-top-left, 
                 .erp-container-content-graphics-star-top-right, 
                 .erp-container-content-graphics-star-bottom-left, 
-                .erp-container-content-graphics-star-bottom-right,
-                .erp-container-content-graphics-star-path-2 {
+                .erp-container-content-graphics-star-bottom-right {
                     opacity: 0;
                 }               
             }
@@ -210,10 +205,11 @@
                 transition-duration: 2s;
             }
             .erp-container-content-graphics-ddm {
-                flex: 0 1 120px;
-                width: 120px;
-                transform: translateX(-45px);
-                position: relative;
+                width: 120px;               
+                position: absolute;
+                right: -125px;
+                bottom: 10px;
+                z-index: -1;
                 transition-duration: 2s;                
                 .ddm-path {                    
                     position: absolute;
@@ -228,11 +224,17 @@
             }
             .erp-container-content-graphics-star {
                 position: relative;                
-                width: 300px;
+                width: 400px;
                 height: 350px;
-                transform: translateX(-50px);
+                transform: translateX(-150px);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 z-index: 2;
                 transition-duration: 2s; 
+                
+                overflow: hidden;
+                opacity: 0;
                 .erp-container-content-graphics-star-doc, 
                 .erp-container-content-graphics-star-xls, 
                 .erp-container-content-graphics-star-xml, 
@@ -245,16 +247,14 @@
                     transition-delay: 0s;
                     transition-duration: 0s;
                 }                
-                .erp-container-content-graphics-star-path-2 {
-                    position: absolute;
-                    top: calc(50% - 25px);
-                    right: -35px;                    
+                .erp-container-content-graphics-star-path-2 {       
+                    order: 2;  
+                    transform: translateX(40px);                                      
                 } 
-                .erp-container-content-graphics-star-main {
-                    position: absolute;
-                    top: 98px;
-                    left: 70px;
+                .erp-container-content-graphics-star-main {                    
                     z-index: 2;
+                    order: 1;
+                    transform: translateX(80px);
                 }                
                 .erp-container-content-graphics-star-doc {
                     position: absolute;
